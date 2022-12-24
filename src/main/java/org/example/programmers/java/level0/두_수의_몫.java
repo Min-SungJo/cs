@@ -1,4 +1,4 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 import java.util.Scanner;
 

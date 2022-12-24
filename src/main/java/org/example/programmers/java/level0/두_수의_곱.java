@@ -1,8 +1,8 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 import java.util.Scanner;
 
-public class 숫자_비교하기 {
+public class 두_수의_곱 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num1 =sc.nextInt();
@@ -12,7 +12,7 @@ public class 숫자_비교하기 {
 
     private static int solution(int num1, int num2) {
 
-        int answer=(num1-num2==0)?1:-1;
+        int answer = num1*num2;
         return answer;
     }
 }

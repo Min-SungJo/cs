@@ -1,4 +1,4 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 public class 점의_위치_구하기 {
     public static void main(String[] args) {

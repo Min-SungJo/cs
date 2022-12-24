@@ -1,4 +1,4 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 public class 배열_뒤집기 {
     public static void main(String[] args) {

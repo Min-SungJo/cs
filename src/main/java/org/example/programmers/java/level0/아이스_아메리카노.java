@@ -1,4 +1,4 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 public class 아이스_아메리카노 {
     public static void main(String[] args) {

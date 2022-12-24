@@ -1,4 +1,4 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 public class 배열_두배_만들기 {
     public static void main(String[] args) {

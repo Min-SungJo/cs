@@ -1,8 +1,8 @@
-package org.example.programmers.level0;
+package org.example.programmers.java.level0;
 
 import java.util.Scanner;
 
-public class 두_수의_차 {
+public class 양꼬치 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num1 =sc.nextInt();
@@ -10,9 +10,9 @@ public class 두_수의_차 {
         System.out.println(solution(num1, num2));
     }
 
-    private static int solution(int num1, int num2) {
-
-        int answer = num1-num2;
+    private static int solution(int n, int k) {
+        k-=(n/10);
+        int answer = n*12000+k*2000;
         return answer;
     }
 }
