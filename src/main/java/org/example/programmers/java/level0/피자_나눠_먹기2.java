@@ -1,7 +1,7 @@
 package org.example.programmers.java.level0;
 
 
-public class 각도기 {
+public class 피자_나눠_먹기2 {
     public static void main(String[] args) {
     
         System.out.println(solution(20));
