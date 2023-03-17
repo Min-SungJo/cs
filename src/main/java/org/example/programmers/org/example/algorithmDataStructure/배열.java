@@ -36,6 +36,7 @@ public class 배열 {
         int inputNum = scan.nextInt();
         primeNum1(inputNum);
         primeNum2(inputNum);
+        primeNum3(inputNum);
     }
 
     /**
@@ -115,21 +116,50 @@ public class 배열 {
             int ptr = 0;
             int[] prime = new int[num / 2 + 1];
             prime[ptr++] = 2;
-
-            for (int n = 3; n<=num; n+=2) {
+            for (int n = 3; n <= num; n += 2) {
                 int i;
-                for (i = 1; i<ptr; i++) { // 배열에 있는 값으로 연산할 예정
+                for (i = 1; i < ptr; i++) { // 배열에 있는 값으로 연산할 예정
                     counter++;
-                    if ( n % prime[i]==0) {
+                    if (n % prime[i] == 0) {
                         break;
                     }
                 }
-                if ( ptr == i ) {
+                if (ptr == i) {
                     prime[ptr++] = n;
                 }
             }
-            System.out.println("소수 수: "+ptr);
-            System.out.println("연산수: "+counter); // 14622
+            System.out.println("소수 수: " + ptr);
+            System.out.println("연산수: " + counter); // 14622
+        }
+    }
+
+    /**
+     * 2부터, 입력한 숫자까지의 소수 출력(배열 활용)3
+     */
+    public static void primeNum3(int num) {
+        // n이 소수라면 n의 제곱근 이하 어떤 소수로도 나누어떨어지지 않음
+        if (num >= 2) {
+            int counter = 0;
+            int ptr = 0;
+            int[] prime = new int[num / 2 + 1];
+            prime[ptr++] = 2;
+            prime[ptr++] = 3;
+            for (int n = 5; n <= num; n += 2) { // 5부터 n 까지 홀수만
+                boolean flag = false;
+                for (int i = 1; prime[i]*prime[i] <= n; i++) { // 조건 i의 제곱이 n보다 작은지 확인
+                    counter += 2;
+                    if (n % prime[i] == 0) { // 나누어떨어지는 경우
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    prime[ptr++] = n;
+                    counter++;
+                }
+            }
+            System.out.println("소수 수: " + ptr);
+            System.out.println("연산수: " + counter); // 3774
         }
     }
 }
