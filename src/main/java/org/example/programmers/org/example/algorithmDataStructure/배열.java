@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class 배열 {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         // 선언
         /** 배열 변수, 배열 그 자체는 아님 */
         int[] a;
@@ -15,10 +16,10 @@ public class 배열 {
         a = new int[5];
         // 접근, access
         // 배열 변수 이름 [인덱스] 를 통해 특정(인덱스에 해당하는) 구성요소에 접근
-
         /**요소값을 초기화 하면서 배열을 선언*/
         int[] arrInt = {1, 2, 3, 5, 4};
         StringBuilder arr = new StringBuilder();
+
         System.out.println(arr.append("배열: ").append(Arrays.toString(arrInt)));
 
         StringBuilder max = new StringBuilder();
@@ -29,10 +30,12 @@ public class 배열 {
         // Arrays.toString()은 모든 요소를 , 로 구분하여 []로 둘러싼 문자열을 얻음
 
         StringBuilder sum = new StringBuilder();
-        System.out.println(sum.append("총합: ").append(maxOf(arrInt)));
+        System.out.println(sum.append("총합: ").append(sumOf(arrInt)));
+
+        StringBuilder clone = new StringBuilder();
+        System.out.println(clone.append("복제된 배열: ").append(Arrays.toString(arrInt.clone())));
 
         System.out.print("숫자 입력: ");
-        Scanner scan = new Scanner(System.in);
         int inputNum = scan.nextInt();
         primeNum1(inputNum);
         primeNum2(inputNum);
@@ -146,7 +149,7 @@ public class 배열 {
             prime[ptr++] = 3;
             for (int n = 5; n <= num; n += 2) { // 5부터 n 까지 홀수만
                 boolean flag = false;
-                for (int i = 1; prime[i]*prime[i] <= n; i++) { // 조건 i의 제곱이 n보다 작은지 확인
+                for (int i = 1; prime[i] * prime[i] <= n; i++) { // 조건 i의 제곱이 n보다 작은지 확인
                     counter += 2;
                     if (n % prime[i] == 0) { // 나누어떨어지는 경우
                         flag = true;
