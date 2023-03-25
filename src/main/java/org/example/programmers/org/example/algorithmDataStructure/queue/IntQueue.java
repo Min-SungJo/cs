@@ -98,4 +98,81 @@ public class IntQueue {
         }
         return x;
     }
+
+    /**
+     * 큐에서 데이터를 피크(front 데이터를 들여다봄)하는 메서드
+     */
+    public int peek() throws EmptyIntQueueException {
+        if (num <= 0) {
+            throw new EmptyIntQueueException(); // 큐가 비어 있음
+        }
+        return que[front];
+    }
+
+    /**
+     * 큐에서 데이터를 비우는 메서드
+     */
+    public void clear() {
+        num = front = rear = 0;
+    }
+
+    /**
+     * 큐에서 매개변수의 인덱스를 검색하는 메서드
+     * 찾지 못하면 -1을 반환
+     */
+    public int indexOf(int x) {
+        for (int i = 0; i < num; i++) {
+            int idx = (i + front) % capacity;
+            if (que[idx] == x) {
+                return idx; // 검색 성공
+            }
+        }
+        return -1; // 검색 실패
+    }
+
+    /**
+     * 큐의 용량을 반환하는 메서드
+     * */
+    public int getCapacity() {
+        return capacity;
+    }
+
+    /**
+     * 큐에 쌓여 있는 데이터 개수를 반환하는 메서드
+     * */
+    public int size() {
+        return num;
+    }
+
+    /**
+     * 큐가 비어 있는지 검사하는 메서드
+     * true 나 false 반환
+     * */
+    public boolean isEmpty() {
+        return num <= 0;
+    }
+
+    /**
+     * 큐가 가득 찼는지 검사하는 메서드
+     * true 나 false 반환
+     * */
+    public boolean isFull() {
+        return num >= capacity;
+    }
+
+    /**
+     * 큐 안에 있는 모든 데이터를 출력하는 메서드
+     * front -> rear 순으로 출력
+     * 큐가 비어있으면 "큐가 비어있습니다" 출력
+     * */
+    public void dump() {
+        if ( num <= 0) {
+            System.out.println("큐가 비어 있습니다.");
+        } else {
+            for (int i = 0; i < num; i++) {
+                System.out.print(que[(i+front)%capacity] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
