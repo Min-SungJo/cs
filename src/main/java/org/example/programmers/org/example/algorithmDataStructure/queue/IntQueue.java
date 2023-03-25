@@ -69,7 +69,7 @@ public class IntQueue {
      *
      * @return que[rear++]
      */
-    public int enque(int x) throws OverflowIntQueException {
+    public int enqueue(int x) throws OverflowIntQueException {
         if (num >= capacity) {
             throw new OverflowIntQueException(); // 큐가 가득 참
         }
@@ -87,7 +87,7 @@ public class IntQueue {
      *
      * @return que[front++]
      */
-    public int deque() throws EmptyIntQueueException {
+    public int dequeue() throws EmptyIntQueueException {
         if (num <= 0) {
             throw new EmptyIntQueueException();
         }

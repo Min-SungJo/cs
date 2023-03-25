@@ -14,7 +14,7 @@ public class StackMain {
             System.out.print("[1]push [2]pop [3]peek [4]clear [5]dump [6]indexOf [7]isEmpty [8]isFull [0]종료");
 
             int menu = scan.nextInt();
-            ;
+
             if (menu == 0) {
                 break;
             }
@@ -71,7 +71,6 @@ public class StackMain {
                     break;
                 default:
                     System.out.println("숫자를 다시 입력해주세요");
-                    continue;
             }
         }
     }
