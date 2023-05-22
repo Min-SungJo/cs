@@ -1,3 +1,4 @@
+package org.example.programmers.java.level1;
 public class 부족한_금액_계산하기 {
 
 	public static void main(String[] args) {
