@@ -1,4 +1,4 @@
-package org.example.programmers.org.example.algorithmDataStructure;
+package org.example.algorithmDataStructure;
 
 import java.util.Arrays;
 import java.util.Scanner;

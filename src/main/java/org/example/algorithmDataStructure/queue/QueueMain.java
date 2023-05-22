@@ -1,4 +1,4 @@
-package org.example.programmers.org.example.algorithmDataStructure.queue;
+package org.example.algorithmDataStructure.queue;
 
 
 import java.util.Scanner;

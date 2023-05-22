@@ -1,4 +1,4 @@
-package org.example.programmers.org.example.algorithmDataStructure.searching;
+package org.example.algorithmDataStructure.searching;
 
 import java.util.Arrays;
 
