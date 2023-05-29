@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class 최빈값_구하기 {
     public static void main(String[] args) {
-        int[] array = {1,2,3,4};
+        int[] array = {2};
         int result = solution(array);
         System.out.println(result);
     }
@@ -18,7 +18,9 @@ public class 최빈값_구하기 {
         int mode = array[0];
         int modeCount = 1;
         boolean change = false;
-
+        if (array.length == 1) {
+            return key;
+        }
         for(int i =1; i < array.length; i++) {
             if(array[i]==key) {
                 count++;
