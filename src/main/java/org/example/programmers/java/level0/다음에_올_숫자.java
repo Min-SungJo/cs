@@ -1,4 +1,4 @@
-package org.example.programmers.java.level1;
+package org.example.programmers.java.level0;
 
 public class 다음에_올_숫자 {
     public static void main(String[] args) {
