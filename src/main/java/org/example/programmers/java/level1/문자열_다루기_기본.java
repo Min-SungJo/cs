@@ -9,11 +9,9 @@ public class 문자열_다루기_기본 {
 
     public static boolean solution(String s) {
         if (s.length() != 4 && s.length() != 6) return false;
-        try {
-            Integer.parseInt(s);
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        return true;
+        int numCheck = s.replaceAll("[0-9]","").length();
+        boolean b = s.matches("(^[0-9]*)");
+        System.out.println("정규 표현식: "+ b);
+        return numCheck==0;
     }
 }
