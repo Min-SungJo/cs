@@ -41,7 +41,7 @@ public class 주사위_게임3 {
                     q = key;
                 }
             }
-            sum = (10 * p + q)*(10 * p + q);
+            sum = (10 * p + q) * (10 * p + q);
         }
         if (size == 2 && map.get(arr[0]) == 2) { // 주사위가 두 개씩 같은 값 (p + q) × |p - q|
             int p = arr[0]; // 일단 첫 번째 값을 설정
@@ -56,16 +56,16 @@ public class 주사위_게임3 {
             sum = (p + q) * (Math.abs(p - q));
         }
         if (size == 3) { // 어느 두 주사위에서 나온 숫자가 p로 같고 나머지 두 주사위에서 나온 숫자가 각각 p와 다름 q × r점을 얻습니다.
-            int q= 0;
-            int r= 0;
-            for(int i : arr) {
-                if(map.get(i)==1&&!map.containsKey(q)) {
+            int q = 0;
+            int r = 0;
+            for (int i : arr) {
+                if (map.get(i) == 1 && !map.containsKey(q)) {
                     q = i;
-                } else if (map.get(i)==1&&map.containsKey(q)) {
-                    r=i;
+                } else if (map.get(i) == 1 && map.containsKey(q)) {
+                    r = i;
                 }
             }
-            sum = q*r;
+            sum = q * r;
         }
         if (size == 4) { // 네 주사위에 적힌 숫자가 모두 다르다면 작은 숫자 만큼의 점수를 얻습니다.
             int min = arr[0];
