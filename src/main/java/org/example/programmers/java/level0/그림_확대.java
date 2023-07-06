@@ -3,7 +3,7 @@ package org.example.programmers.java.level0;
 public class 그림_확대 {
     public static void main(String[] args) {
         String[] picture = {".xx...xx.", "x..x.x..x", "x...x...x", ".x.....x.", "..x...x..", "...x.x...", "....x...."};
-        int k = 2;
+        int k = 8;
         System.out.println(solution(picture, k));
     }
 
