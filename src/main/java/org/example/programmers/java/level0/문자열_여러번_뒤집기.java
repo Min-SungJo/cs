@@ -11,12 +11,12 @@ public class 문자열_여러번_뒤집기 {
         for (int[] list : queries) {
             int s = list[0];
             int e = list[1]+1;
-            StringBuilder builder = new StringBuilder();
-            builder.append(my_string, 0, s);
-            StringBuffer buffer = new StringBuffer(my_string.substring(s,e)).reverse();
-            builder.append(buffer);
-            builder.append(my_string, e, my_string.length());
-            my_string = builder.toString();
+            StringBuilder sb1 = new StringBuilder();
+            sb1.append(my_string, 0, s);
+            StringBuilder sb2 = new StringBuilder(my_string.substring(s,e)).reverse();
+            sb1.append(sb2);
+            sb1.append(my_string, e, my_string.length());
+            my_string = sb1.toString();
         }
         return my_string;
     }
