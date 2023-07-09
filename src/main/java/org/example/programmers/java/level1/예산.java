@@ -12,13 +12,11 @@ public class 예산 {
     private static int solution(int[] d, int budget) {
         int sum = 0;
         Arrays.sort(d);
-        for(int i : d) {
-            if(budget>=0) {
-                sum++;
-                budget-=i;
-            }
+        for (int i = 0; i < d.length; i++) {
+            budget -= d[i];
+            if (budget < 0) break;
+            sum++;
         }
-        if(budget<0) sum--;
         return sum;
     }
 }
