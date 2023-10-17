@@ -1,7 +1,9 @@
 package org.example.programmers.java.level2;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class 의상 {
     public static void main(String[] args) {
@@ -26,10 +28,17 @@ public class 의상 {
             value = map.getOrDefault(key, 1) + 1; // 0을 선택할 경우 고려하여 기본값을 0이 아닌 1로 설정
             map.put(key, value);
         }
-        for(int i : map.values()) {
-            answer*=i;
+        for (int i : map.values()) {
+            answer *= i;
         }
         answer--;
+
+        int stream =
+                Arrays.stream(clothes)
+                        .collect(Collectors.groupingBy(p -> p[1], Collectors.mapping(p -> p[0], Collectors.counting())))
+                        .values()
+                        .stream().reduce(1L, (x, y) -> x * (y + 1)).intValue() - 1;
+
         return answer;
     }
 
